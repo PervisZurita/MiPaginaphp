@@ -1,0 +1,677 @@
+
+/* =========================================================
+   PALETA DE COLORES PASTEL
+========================================================= */
+
+:root {
+    --pastel-lavanda: #e9e2f7;
+    --pastel-azul: #dceaf7;
+    --pastel-menta: #dcefe7;
+    --pastel-rosa: #f7e1e8;
+    --pastel-crema: #f8efd9;
+    --pastel-fondo: #f8f7fc;
+
+    --pastel-texto: #45445a;
+    --pastel-texto-secundario: #77758c;
+    --pastel-borde: #e7e2ef;
+    --pastel-acento: #a99bd1;
+
+    --sidebar-width: 270px;
+    --sidebar-collapsed-width: 82px;
+}
+
+/* =========================================================
+   RESET DEL HEADER
+========================================================= */
+
+#site-header,
+#site-header *,
+#site-header *::before,
+#site-header *::after {
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADER Y NAVBAR COMPACTO
+========================================================= */
+
+#site-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 5000;
+    background: #ffffff;
+}
+
+#site-header .professional-navbar {
+    position: relative;
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1050;
+
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid var(--pastel-borde);
+    box-shadow: 0 4px 20px rgba(105, 91, 135, 0.07);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+#site-header .navbar-container {
+    display: flex;
+    align-items: center;
+    min-height: 0;
+    margin: 0;
+    padding: 4px 20px;
+    background: transparent;
+}
+
+/* Orden de los menús */
+
+#site-header .navbar-menu,
+#site-header .user-dropdown-menu,
+#site-header .search-panel {
+    z-index: 1060;
+}
+
+/* =========================================================
+   LOGO Y MARCA
+========================================================= */
+
+#site-header .brand {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    color: var(--pastel-texto);
+    line-height: 1.2;
+}
+
+#site-header .brand:hover {
+    color: var(--pastel-texto);
+}
+
+#site-header .brand-icon {
+    background: linear-gradient(
+        135deg,
+        #b9acd9,
+        #a5bfdc
+    );
+    color: #ffffff;
+    box-shadow: 0 7px 18px rgba(143, 126, 184, 0.20);
+}
+
+#site-header .brand-text {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
+#site-header .brand-text strong {
+    color: var(--pastel-texto);
+    line-height: 1.2;
+}
+
+#site-header .brand-text small {
+    color: #89839e;
+    line-height: 1.2;
+}
+
+/* =========================================================
+   ENLACES DEL NAVBAR
+========================================================= */
+
+#site-header .navbar-links {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#site-header .navbar-links > li > a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #625d76;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+#site-header .navbar-links > li > a:hover,
+#site-header .navbar-links > li > a.active {
+    color: #51476e;
+    background: #f2edfa;
+}
+
+#site-header .navbar-links > li > a.active::after {
+    background: var(--pastel-acento);
+}
+
+/* =========================================================
+   BOTONES Y ACCIONES
+========================================================= */
+
+#site-header .navbar-actions {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#site-header .navbar-action,
+#site-header .theme-toggle {
+    color: var(--pastel-texto-secundario);
+}
+
+#site-header .navbar-action:hover,
+#site-header .theme-toggle:hover {
+    background: var(--pastel-lavanda);
+    color: #514b6b;
+}
+
+#site-header .navbar-divider {
+    background: #e7e0f1;
+}
+
+#site-header .login-button {
+    background: #b6a9d8;
+    color: #ffffff;
+    transition:
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#site-header .login-button:hover {
+    background: #a396c9;
+    color: #ffffff;
+    box-shadow: 0 7px 18px rgba(143, 126, 184, 0.22);
+}
+
+#site-header .navbar-toggle {
+    margin-top: 0;
+    margin-bottom: 0;
+    background: #e9e2f7;
+}
+
+#site-header .navbar-toggle span {
+    background: #625a7c;
+}
+
+/* =========================================================
+   USUARIO Y AVATAR
+========================================================= */
+
+#site-header .user-dropdown-toggle {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-color: #e7e0f1;
+    background: #ffffff;
+    color: #514b6b;
+}
+
+#site-header .user-dropdown-toggle:hover,
+#site-header .user-dropdown-toggle:focus,
+#site-header .user-dropdown-toggle.show {
+    background: #f4f0fb;
+    border-color: #cfc3e8;
+    color: #514b6b;
+    box-shadow: 0 4px 12px rgba(105, 91, 135, 0.08);
+}
+
+#site-header .user-avatar {
+    background: linear-gradient(
+        135deg,
+        #b9acd9,
+        #a5bfdc
+    );
+    color: #ffffff;
+}
+
+#site-header .user-name {
+    color: #514b6b;
+}
+
+#site-header .user-arrow {
+    color: #89839e;
+}
+
+/* =========================================================
+   MENÚ DESPLEGABLE DE USUARIO
+========================================================= */
+
+#site-header .user-dropdown-menu,
+#site-header .user-dropdown-menu.dropdown-menu {
+    border-color: #e7e0f1;
+    background: #ffffff;
+    box-shadow: 0 15px 35px rgba(105, 91, 135, 0.15);
+}
+
+#site-header .user-dropdown-menu .dropdown-item {
+    color: #514b6b;
+}
+
+#site-header .user-dropdown-menu .dropdown-item:hover,
+#site-header .user-dropdown-menu .dropdown-item:focus {
+    background: #f0eafb;
+    color: #514b6b;
+}
+
+#site-header .user-dropdown-menu .dropdown-item i {
+    color: #9a8bbd;
+}
+
+#site-header .user-dropdown-menu .dropdown-item:hover i {
+    color: #78699f;
+}
+
+#site-header .user-dropdown-menu .dropdown-divider {
+    border-color: #eee8f5;
+}
+
+/* Cerrar sesión */
+
+#site-header .logout-item:hover,
+#site-header .logout-item:focus {
+    background: #fbe8eb !important;
+    color: #bd6879 !important;
+}
+
+#site-header .logout-item:hover i,
+#site-header .logout-item:focus i {
+    color: #bd6879 !important;
+}
+
+/* =========================================================
+   BUSCADOR
+========================================================= */
+
+#site-header .search-panel {
+    background: #fcfaff;
+    border-top-color: #e7e0f1;
+    box-shadow: 0 12px 28px rgba(105, 91, 135, 0.12);
+}
+
+#site-header .search-container > i {
+    color: #9488b2;
+}
+
+#site-header .search-container input {
+    color: var(--pastel-texto);
+}
+
+#site-header .search-container input::placeholder {
+    color: #aaa4bb;
+}
+
+#site-header .search-container {
+    background: #f6f2fc;
+    border-color: #e5dcef;
+}
+
+#site-header #search-submit {
+    color: #ffffff;
+    background: #a99bd1;
+}
+
+#site-header #search-submit:hover {
+    background: #9484c2;
+}
+
+#site-header #search-close {
+    color: #77758c;
+    background: #eee8f7;
+}
+
+#site-header #search-close:hover {
+    color: #b75f77;
+    background: #f7e1e8;
+}
+
+#site-header #search-close {
+    color: #77758c;
+}
+
+#site-header #search-close:hover {
+    background: #eee8f7;
+    color: #514b6b;
+}
+
+/* Coincidencias de búsqueda */
+
+.search-highlight {
+    color: #795b31;
+    background: #f8edc7;
+}
+
+.search-highlight-active {
+    color: #ffffff;
+    background: #9b91d1;
+    outline-color: #d1c8f0;
+}
+
+/* =========================================================
+   MENÚ LATERAL
+========================================================= */
+
+.sidebar {
+    --sidebar-bg: #e9e4f4;
+    --sidebar-text: #5d5875;
+    --sidebar-accent: #9b8bc9;
+    --sidebar-hover: #dcd3ee;
+
+    background: var(--sidebar-bg);
+    color: #514b6b;
+    box-shadow: 4px 0 18px rgba(105, 91, 135, 0.10);
+}
+
+.sidebar-header {
+    border-bottom-color: #dcd4ec;
+}
+
+.sidebar-logo {
+    background: #b9acd9;
+    color: #ffffff;
+}
+
+.sidebar-header > i,
+.sidebar-link > i,
+.sidebar-logo i {
+    color: #9483c2;
+}
+
+.sidebar-menu-icon {
+    color: #9483c2 !important;
+}
+
+.sidebar-menu-icon:hover {
+    color: #716293 !important;
+}
+
+.sidebar-title strong {
+    color: #514b6b;
+}
+
+.sidebar-title small {
+    color: #89839e;
+}
+
+.sidebar-label {
+    color: #9288aa;
+}
+
+.sidebar-link {
+    color: var(--sidebar-text);
+}
+
+.sidebar-link:hover {
+    color: #514b6b;
+    background: var(--sidebar-hover);
+}
+
+.sidebar-link:hover i {
+    color: #78699f;
+}
+
+.sidebar-link.active {
+    color: #514b6b;
+    background: #d8cdef;
+    box-shadow: inset 3px 0 var(--sidebar-accent);
+}
+
+.sidebar-link.active i {
+    color: #78699f;
+}
+
+.sidebar-footer {
+    border-top-color: #dcd4ec;
+    color: #89839e;
+}
+
+/* =========================================================
+   MENÚ LATERAL EN MÓVILES
+========================================================= */
+
+@media (max-width: 800px) {
+    #site-header .navbar-container {
+        padding: 4px 12px;
+    }
+
+    #site-header .navbar-menu {
+        background: #fcfaff;
+        border-top-color: #e7e0f1;
+        border-bottom-color: #e7e0f1;
+        box-shadow: 0 18px 35px rgba(105, 91, 135, 0.12);
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+
+    #site-header .navbar-actions {
+        border-top-color: #eee8f5;
+    }
+}
+
+/* =========================================================
+   TEMA OSCURO: HEADER Y NAVBAR
+========================================================= */
+
+html.dark-mode #site-header {
+    background: #29263a;
+}
+
+html.dark-mode #site-header .professional-navbar {
+    background: rgba(39, 36, 54, 0.97);
+    border-bottom-color: #464057;
+}
+
+html.dark-mode #site-header .brand,
+html.dark-mode #site-header .brand:hover,
+html.dark-mode #site-header .brand-text strong {
+    color: #f0eafb;
+}
+
+html.dark-mode #site-header .brand-text small {
+    color: #c1b7d7;
+}
+
+html.dark-mode #site-header .navbar-links > li > a {
+    color: #c8c0dc;
+}
+
+html.dark-mode #site-header .navbar-links > li > a:hover,
+html.dark-mode #site-header .navbar-links > li > a.active {
+    color: #ffffff;
+    background: #454057;
+}
+
+html.dark-mode #site-header .navbar-links > li > a.active::after {
+    background: #c0b0e6;
+}
+
+html.dark-mode #site-header .navbar-action,
+html.dark-mode #site-header .theme-toggle {
+    color: #d1c9e3;
+}
+
+html.dark-mode #site-header .navbar-action:hover,
+html.dark-mode #site-header .theme-toggle:hover {
+    background: #454057;
+    color: #ffffff;
+}
+
+html.dark-mode #site-header .navbar-divider {
+    background: #4a455b;
+}
+
+html.dark-mode #site-header .login-button {
+    background: #a99bd1;
+    color: #ffffff;
+}
+
+/* Usuario */
+
+html.dark-mode #site-header .user-dropdown-toggle {
+    background: #343044;
+    border-color: #514a64;
+    color: #f0eafb;
+}
+
+html.dark-mode #site-header .user-dropdown-toggle:hover,
+html.dark-mode #site-header .user-dropdown-toggle:focus,
+html.dark-mode #site-header .user-dropdown-toggle.show {
+    background: #49425f;
+    border-color: #665a80;
+    color: #ffffff;
+}
+
+html.dark-mode #site-header .user-name {
+    color: #f0eafb;
+}
+
+html.dark-mode #site-header .user-arrow {
+    color: #c1b7d7;
+}
+
+/* Menú desplegable */
+
+html.dark-mode #site-header .user-dropdown-menu,
+html.dark-mode #site-header .user-dropdown-menu.dropdown-menu {
+    background: #343044;
+    border-color: #514a64;
+}
+
+html.dark-mode #site-header .user-dropdown-menu .dropdown-item {
+    color: #e4ddef;
+}
+
+html.dark-mode #site-header .user-dropdown-menu .dropdown-item:hover,
+html.dark-mode #site-header .user-dropdown-menu .dropdown-item:focus {
+    background: #49425f;
+    color: #ffffff;
+}
+
+html.dark-mode #site-header .user-dropdown-menu .dropdown-item i {
+    color: #c0b0e6;
+}
+
+html.dark-mode #site-header .user-dropdown-menu .dropdown-divider {
+    border-color: #514a64;
+}
+
+html.dark-mode #site-header .logout-item:hover,
+html.dark-mode #site-header .logout-item:focus {
+    background: #65475a !important;
+    color: #ffffff !important;
+}
+
+/* Buscador */
+
+html.dark-mode #site-header .search-panel {
+    background: #29263a;
+    border-color: #464057;
+}
+
+html.dark-mode #site-header .search-container {
+    background: #343044;
+    border-color: #514a64;
+}
+
+html.dark-mode #site-header .search-container input {
+    color: #f0eafb;
+}
+
+html.dark-mode #site-header .search-container input::placeholder {
+    color: #aaa0bf;
+}
+
+html.dark-mode #site-header #search-submit {
+    background: #a99bd1;
+    color: #ffffff;
+}
+
+html.dark-mode #site-header #search-close {
+    background: #49425f;
+    color: #e4ddef;
+}
+
+html.dark-mode #site-header #search-close:hover {
+    background: #65475a;
+    color: #ffffff;
+}
+
+/* =========================================================
+   TEMA OSCURO: MENÚ LATERAL
+========================================================= */
+
+html.dark-mode .sidebar {
+    --sidebar-bg: #29263a;
+    --sidebar-text: #d3cbe5;
+    --sidebar-accent: #b9acd9;
+    --sidebar-hover: #454057;
+
+    color: #f0eafb;
+}
+
+html.dark-mode .sidebar-header {
+    border-bottom-color: #464057;
+}
+
+html.dark-mode .sidebar-logo {
+    background: #49425f;
+}
+
+html.dark-mode .sidebar-header > i,
+html.dark-mode .sidebar-link > i,
+html.dark-mode .sidebar-logo i {
+    color: #c0b0e6;
+}
+
+html.dark-mode .sidebar-title strong {
+    color: #f0eafb;
+}
+
+html.dark-mode .sidebar-title small,
+html.dark-mode .sidebar-footer {
+    color: #c1b7d7;
+}
+
+html.dark-mode .sidebar-label {
+    color: #aaa0bf;
+}
+
+html.dark-mode .sidebar-link {
+    color: #d3cbe5;
+}
+
+html.dark-mode .sidebar-link:hover {
+    color: #ffffff;
+    background: #454057;
+}
+
+html.dark-mode .sidebar-link.active {
+    background: #49425f;
+    color: #ffffff;
+}
+
+html.dark-mode .sidebar-link.active i {
+    color: #d7c9f3;
+}
+
+html.dark-mode .sidebar-footer {
+    border-top-color: #464057;
+}
+
+/* =========================================================
+   TEMA OSCURO EN MÓVILES
+========================================================= */
+
+@media (max-width: 800px) {
+    html.dark-mode #site-header .navbar-menu {
+        background: #29263a;
+        border-top-color: #464057;
+        border-bottom-color: #464057;
+    }
+
+    html.dark-mode #site-header .navbar-actions {
+        border-top-color: #464057;
+    }
+}

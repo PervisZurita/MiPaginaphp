@@ -1,0 +1,630 @@
+
+.infografias-pagina {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px 22px 55px;
+    color: #172033;
+}
+
+.infografias-hero {
+    padding: 42px;
+    border-radius: 22px;
+    color: #fff;
+    background: linear-gradient(125deg, #102a43, #176b87);
+    margin-bottom: 38px;
+    box-shadow: 0 12px 30px rgba(16, 42, 67, .13);
+}
+
+.infografias-hero-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    border-radius: 17px;
+    background: rgba(255, 255, 255, .15);
+    font-size: 29px;
+    margin-bottom: 22px;
+}
+
+.infografias-hero > span {
+    display: block;
+    color: #b9e7f5;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.infografias-hero h1 {
+    font-size: clamp(27px, 4vw, 39px);
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 0 0 15px;
+}
+
+.infografias-hero p {
+    max-width: 760px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #e0edf5;
+    margin-bottom: 0;
+}
+
+.infografias-hero .btn-infografia-agregar {
+    margin-top: 24px;
+}
+
+.infografias-hero-compacto {
+    padding: 30px 35px;
+    margin-bottom: 28px;
+}
+
+.btn-infografia-agregar,
+.btn-infografia-guardar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    padding: 13px 19px;
+    background: #fff;
+    color: #102a43;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+.btn-infografia-agregar:hover {
+    color: #102a43;
+    background: #e0f2fe;
+    transform: translateY(-2px);
+}
+
+.infografias-contenedor {
+    width: 100%;
+}
+
+.infografias-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 27px;
+}
+
+.infografias-supertexto {
+    font-size: 11px;
+    color: #0e7490;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.infografias-encabezado h2 {
+    color: #102a43;
+    font-size: 27px;
+    font-weight: 800;
+    margin: 8px 0;
+}
+
+.infografias-encabezado p {
+    color: #64748b;
+    margin: 0;
+    line-height: 1.7;
+}
+
+.infografias-contador {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 15px 19px;
+    background: #f0f9ff;
+    border: 1px solid #dbeafe;
+    border-radius: 13px;
+    color: #0e7490;
+}
+
+.infografias-contador > i {
+    font-size: 25px;
+}
+
+.infografias-contador strong,
+.infografias-contador span {
+    display: block;
+}
+
+.infografias-contador strong {
+    font-size: 22px;
+    color: #102a43;
+}
+
+.infografias-contador span {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.infografias-lista {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.infografia-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 17px;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, .05);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.infografia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(15, 23, 42, .11);
+}
+
+.infografia-imagen {
+    height: 250px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #f1f5f9;
+}
+
+.infografia-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform .3s ease;
+}
+
+.infografia-card:hover .infografia-imagen img {
+    transform: scale(1.035);
+}
+
+.infografia-ver-imagen {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #102a43;
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+
+.infografia-card:hover .infografia-ver-imagen {
+    opacity: 1;
+}
+
+.infografia-informacion {
+    padding: 22px;
+}
+
+.infografia-etiqueta {
+    display: inline-flex;
+    gap: 7px;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 30px;
+    background: #e0f2fe;
+    color: #075985;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.infografia-informacion h3 {
+    color: #172033;
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.45;
+    margin: 15px 0 10px;
+    overflow-wrap: anywhere;
+}
+
+.infografia-descripcion {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.8;
+    min-height: 75px;
+    overflow-wrap: anywhere;
+}
+
+.infografia-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 17px;
+}
+
+.btn-infografia-ver,
+.btn-infografia-descargar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.btn-infografia-ver {
+    background: #102a43;
+    color: #fff;
+}
+
+.btn-infografia-ver:hover {
+    color: #fff;
+    background: #176b87;
+}
+
+.btn-infografia-descargar {
+    color: #075985;
+    background: #e0f2fe;
+}
+
+.btn-infografia-descargar:hover {
+    background: #bae6fd;
+    color: #0c4a6e;
+}
+
+.infografia-enlace {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 17px;
+    color: #087e8b;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.infografia-enlace:hover {
+    color: #102a43;
+    text-decoration: underline;
+}
+
+.infografia-admin-acciones {
+    display: flex;
+    gap: 9px;
+    padding-top: 16px;
+    margin-top: 16px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.btn-infografia-editar,
+.btn-infografia-eliminar {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.btn-infografia-editar {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.btn-infografia-editar:hover {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.btn-infografia-eliminar {
+    background: #fff1f2;
+    color: #be123c;
+}
+
+.btn-infografia-eliminar:hover {
+    background: #ffe4e6;
+    color: #9f1239;
+}
+
+.infografias-vacias {
+    padding: 55px 25px;
+    text-align: center;
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 18px;
+}
+
+.infografias-vacias-icono {
+    font-size: 47px;
+    color: #0e7490;
+    margin-bottom: 17px;
+}
+
+.infografias-vacias h3 {
+    color: #102a43;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.infografias-vacias p {
+    max-width: 560px;
+    margin: 12px auto 22px;
+    color: #64748b;
+    line-height: 1.8;
+}
+
+.infografias-vacias .btn-infografia-agregar {
+    background: #102a43;
+    color: #fff;
+    border-color: #102a43;
+}
+
+.infografia-formulario-contenedor {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.infografia-migas {
+    margin-bottom: 20px;
+}
+
+.infografia-migas a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #176b87;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.infografia-migas a:hover {
+    color: #102a43;
+}
+
+.infografia-formulario {
+    padding: 32px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, .06);
+}
+
+.infografia-formulario-intro {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 25px;
+    margin-bottom: 27px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.infografia-formulario-icono {
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #e0f2fe;
+    color: #075985;
+    font-size: 23px;
+}
+
+.infografia-formulario-intro h2 {
+    margin: 0 0 7px;
+    color: #102a43;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.infografia-formulario-intro p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.infografia-label {
+    display: block;
+    color: #26384a;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.infografia-input,
+.infografia-formulario textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #fff;
+    color: #172033;
+    font-size: 14px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.infografia-input:focus,
+.infografia-formulario textarea:focus {
+    border-color: #0284c7;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, .12);
+}
+
+.infografia-formulario .form-group {
+    margin-bottom: 23px;
+}
+
+.infografia-formulario .hint-block {
+    display: block;
+    margin-top: 8px;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.infografia-formulario .help-block {
+    margin-top: 7px;
+    color: #be123c;
+    font-size: 13px;
+}
+
+.infografia-input-archivo {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    background: #f8fafc;
+    border: 1px dashed #94a3b8;
+    border-radius: 10px;
+    color: #334155;
+}
+
+.infografia-imagen-actual {
+    margin-bottom: 23px;
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #f8fafc;
+}
+
+.infografia-preview-actual {
+    display: block;
+    max-width: 100%;
+    max-height: 280px;
+    object-fit: contain;
+    margin: 13px 0;
+    border-radius: 8px;
+}
+
+.infografia-imagen-actual p {
+    margin: 0;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.infografia-formulario-nota {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px;
+    margin: 10px 0 25px;
+    border-radius: 10px;
+    background: #f0f9ff;
+    color: #075985;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.infografia-formulario-nota i {
+    margin-top: 3px;
+}
+
+.infografia-formulario-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 22px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.btn-infografia-guardar {
+    background: #102a43;
+    border-color: #102a43;
+    color: #fff;
+}
+
+.btn-infografia-guardar:hover {
+    background: #176b87;
+    border-color: #176b87;
+}
+
+.btn-infografia-cancelar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #fff;
+    color: #334155;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.btn-infografia-cancelar:hover {
+    background: #f1f5f9;
+    color: #102a43;
+}
+
+@media (max-width: 1050px) {
+    .infografias-lista {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .infografias-pagina {
+        padding: 18px 12px 35px;
+    }
+
+    .infografias-hero {
+        padding: 27px 22px;
+        border-radius: 16px;
+    }
+
+    .infografias-hero-compacto {
+        padding: 25px 20px;
+    }
+
+    .infografias-encabezado {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .infografias-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .infografia-imagen {
+        height: 240px;
+    }
+
+    .infografia-formulario {
+        padding: 22px 17px;
+    }
+
+    .infografia-formulario-intro {
+        align-items: flex-start;
+    }
+
+    .infografia-formulario-intro h2 {
+        font-size: 19px;
+    }
+
+    .infografia-formulario-acciones {
+        flex-direction: column;
+    }
+
+    .btn-infografia-guardar,
+    .btn-infografia-cancelar {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
